@@ -1,0 +1,51 @@
+﻿<Window x:Class="xxtea.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:xxtea"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    
+    <Grid ShowGridLines="True">
+        <DockPanel>
+            <Menu DockPanel.Dock="Top" Grid.ColumnSpan="2">
+                <MenuItem Header="Файл" Height="26">
+                    <MenuItem Header="Действия с файлом"/>
+                    <MenuItem Header="Параметры"/>
+                </MenuItem>
+                <MenuItem Header="Справка" Height="25">
+                    <MenuItem Header="Алгоритм"/>
+                    <MenuItem Header="О программе"/>
+                </MenuItem>
+            </Menu>    
+        </DockPanel>
+        
+        <Button x:Name="EncryptButton" 
+                Content="Зашифровать" 
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Grid.Row="1" 
+                Grid.Column="0"
+         />
+        
+        <Button x:Name="DecryptButton" 
+                Content="Расшифровать" 
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Grid.Row="2" 
+                Grid.Column="0"
+         />
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="5*"/> 
+        </Grid.ColumnDefinitions>
+    </Grid>
+</Window>
