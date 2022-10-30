@@ -17,14 +17,14 @@
                 Content="Зашифровать" 
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
-                Grid.Row="0" 
+                Grid.Row="0" Click="EncryptButton_Click" 
              />
 
             <Button x:Name="DecryptButton" 
                 Content="Расшифровать" 
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
-                Grid.Row="1" 
+                Grid.Row="1" Click="DecryptButton_Click" 
               />
         </Grid>
 
@@ -33,6 +33,10 @@
                 <ColumnDefinition Width="2*"/>
                 <ColumnDefinition Width="8*"/>
             </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
 
             <Button x:Name="InputFileButton"
                     Content="Входной файл"
@@ -41,6 +45,7 @@
                     Grid.Column="0" Click="InputFileButton_Click"
              />
             <TextBox x:Name="InputFileTextbox" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10" TextWrapping="Wrap" Text=""  Width="300"/>
+            <TextBlock x:Name="InputFileContent" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" RenderTransformOrigin="-0.714,-1" Height="65" Width="443"/>
         </Grid>
 
         <Grid ShowGridLines="True" Grid.Row="2" Grid.Column="2">
@@ -48,6 +53,10 @@
                 <ColumnDefinition Width="2*"/>
                 <ColumnDefinition Width="8*"/>
             </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
 
             <Button x:Name="OutputFileButton"
                     Content="Выходной файл"
@@ -56,6 +65,7 @@
                     Grid.Column="0" Click="OutputFileButton_Click" 
              />
             <TextBox x:Name="OutputFileTextbox" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10" TextWrapping="Wrap" Text=""  Width="300"/>
+            <TextBlock x:Name="OutputFileContent" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" RenderTransformOrigin="-0.286,-0.875" Height="65" Width="443"/>
         </Grid>
 
         <DockPanel>

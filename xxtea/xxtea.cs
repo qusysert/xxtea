@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace xxtea
 {
-    public sealed class XXTEA
+    public class XXTEA
     {
         private static readonly UTF8Encoding utf8 = new UTF8Encoding();
 
@@ -17,7 +17,7 @@ namespace xxtea
             return (z >> 5 ^ y << 2) + (y >> 3 ^ z << 4) ^ (sum ^ y) + (k[p & 3 ^ e] ^ z);
         }
 
-        private XXTEA()
+        public XXTEA()
         {
         }
 
