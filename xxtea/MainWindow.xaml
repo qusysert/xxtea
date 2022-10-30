@@ -6,8 +6,58 @@
         xmlns:local="clr-namespace:xxtea"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    
+
     <Grid ShowGridLines="True">
+        <Grid ShowGridLines="True" Grid.Row="1" Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Button x:Name="EncryptButton" 
+                Content="Зашифровать" 
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Grid.Row="0" 
+             />
+
+            <Button x:Name="DecryptButton" 
+                Content="Расшифровать" 
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Grid.Row="1" 
+              />
+        </Grid>
+
+        <Grid ShowGridLines="True" Grid.Row="1" Grid.Column="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="8*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="InputFileButton"
+                    Content="Входной файл"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Grid.Column="0" Click="InputFileButton_Click"
+             />
+            <TextBox x:Name="InputFileTextbox" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10" TextWrapping="Wrap" Text=""  Width="300"/>
+        </Grid>
+
+        <Grid ShowGridLines="True" Grid.Row="2" Grid.Column="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="8*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="OutputFileButton"
+                    Content="Выходной файл"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Grid.Column="0" Click="OutputFileButton_Click" 
+             />
+            <TextBox x:Name="OutputFileTextbox" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10" TextWrapping="Wrap" Text=""  Width="300"/>
+        </Grid>
+
         <DockPanel>
             <Menu DockPanel.Dock="Top" Grid.ColumnSpan="2">
                 <MenuItem Header="Файл" Height="26">
@@ -18,24 +68,8 @@
                     <MenuItem Header="Алгоритм"/>
                     <MenuItem Header="О программе"/>
                 </MenuItem>
-            </Menu>    
+            </Menu>
         </DockPanel>
-        
-        <Button x:Name="EncryptButton" 
-                Content="Зашифровать" 
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center"
-                Grid.Row="1" 
-                Grid.Column="0"
-         />
-        
-        <Button x:Name="DecryptButton" 
-                Content="Расшифровать" 
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center"
-                Grid.Row="2" 
-                Grid.Column="0"
-         />
 
         <Grid.RowDefinitions>
             <RowDefinition Height="2*" />
@@ -45,7 +79,9 @@
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="2*"/>
-            <ColumnDefinition Width="5*"/> 
+            <ColumnDefinition Width="5*"/>
         </Grid.ColumnDefinitions>
+
     </Grid>
+
 </Window>
