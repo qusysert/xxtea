@@ -7,7 +7,19 @@ namespace xxtea
 {
     public partial class MainWindow : Window
     {
-        private string key = "1234567890";
+        public string key = "1234567890";
+
+        public string Key
+        {
+            get
+            {
+                return key;
+            }
+            set
+            {
+                key = value;
+            }
+        }
 
         public MainWindow()
         {
@@ -59,6 +71,13 @@ namespace xxtea
             File.WriteAllText(OutputFileTextbox.Text, XXTEA.DecryptToString(bytes, key));
 
             OutputFileContent.Text = File.ReadAllText(OutputFileTextbox.Text);
+        }
+
+        private void Parametrs_Click(object sender, RoutedEventArgs e)
+        {
+            var propertyWindow = new PropertyWindow(this);
+            propertyWindow.KeyTextbox.Text = key;
+            propertyWindow.Show();
         }
     }
 }

@@ -71,8 +71,8 @@
         <DockPanel>
             <Menu DockPanel.Dock="Top" Grid.ColumnSpan="2">
                 <MenuItem Header="Файл" Height="26">
-                    <MenuItem Header="Действия с файлом"/>
-                    <MenuItem Header="Параметры"/>
+                    <MenuItem  Header="Действия с файлом" />
+                    <MenuItem x:Name="Parametrs" Header="Параметры" Click="Parametrs_Click"/>
                 </MenuItem>
                 <MenuItem Header="Справка" Height="25">
                     <MenuItem Header="Алгоритм"/>
