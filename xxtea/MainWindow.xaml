@@ -76,7 +76,7 @@
                 </MenuItem>
                 <MenuItem Header="Справка" Height="25">
                     <MenuItem Header="Алгоритм"/>
-                    <MenuItem Header="О программе"/>
+                    <MenuItem Header="О программе" Click="About_Click"/>
                 </MenuItem>
             </Menu>
         </DockPanel>
