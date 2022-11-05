@@ -1,0 +1,14 @@
+﻿<Window x:Name="AlgorithmDescriptionWindow" x:Class="xxtea.AlgorithmDescription"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:xxtea"
+        mc:Ignorable="d"
+        Title="AlgorithmDescription" Height="858" Width="800">
+    <Grid Height="294" VerticalAlignment="Top">
+        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="148" Width="750" TextAlignment="Justify"><Run Text="&#x9;XXTEA — криптографический алгоритм, реализующий блочное симметричное шифрование и представляющий собой сеть Фейстеля. Является расширение алгоритма Block TEA. Разработан и опубликован Дэвидом Уилером (англ.) и Роджером Нидхемом в 1998 году. Выполнен на простых и быстрых операциях: XOR, подстановка, сложение."/><LineBreak/><Run Text="&#x9;XXTEA, как и остальные шифры семейства TEA, обладает рядом отличительных особенностей по сравнению с аналогичными шифрами:"/><LineBreak/><Run Text="- Высокая скорость работы"/><LineBreak/><Run Text="- Малое потребление памяти"/><LineBreak/><Run Text="- Простая программная реализация"/><LineBreak/><Run Text="- Относительно высокая надёжность."/><LineBreak/><Run/></TextBlock>
+        <Image Source="images/struct.png" Margin="10,163,402,-295"/>
+        <Image Source="images/func.png" Margin="402,158,10,-290"/>
+    </Grid>
+</Window>

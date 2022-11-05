@@ -85,5 +85,11 @@ namespace xxtea
             var aboutWindow = new AboutWindow();
             aboutWindow.Show();
         }
+
+        private void AlgorithmDescription_Click(object sender, RoutedEventArgs e)
+        {
+            var algoWindow = new AlgorithmDescription();
+            algoWindow.Show();
+        }
     }
 }

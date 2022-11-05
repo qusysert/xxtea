@@ -8,6 +8,6 @@
         Title="AboutWindow" Height="180" Width="350">
     <Grid>
         <Label Content="Программная  реализация алгоритма XXTEA&#xD;&#xA;выполнил студент группы БИСТ-20-2&#xD;&#xA;Демчук Иван Сергеевич&#xD;&#xA;ИТКН НИТУ МИСиС&#xD;&#xA;Москва 2022" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="169" Width="374" FontSize="15"/>
-
+        
     </Grid>
 </Window>
